@@ -18,3 +18,4 @@ RUN apk add --no-cache zip unzip \
 
 # install composer plugin
 RUN composer global require hirak/prestissimo
+RUN composer global require phpstan/phpstan:@dev
