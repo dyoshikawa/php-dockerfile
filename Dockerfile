@@ -9,7 +9,6 @@ RUN apk add -U --no-cache bash git curl-dev libxml2-dev postgresql-dev libpng-de
 RUN docker-php-source extract
 RUN cp /usr/src/php/ext/openssl/config0.m4 /usr/src/php/ext/openssl/config.m4
 RUN docker-php-ext-configure gd --with-png-dir=/usr/include --with-jpeg-dir=/usr/include
-RUN docker-php-ext-install gd
 RUN docker-php-ext-install pdo pdo_mysql mysqli pdo_pgsql pgsql mbstring curl \
     ctype xml json tokenizer openssl gd zip
 
